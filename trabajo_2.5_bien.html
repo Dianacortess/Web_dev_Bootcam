@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Ejemplo layout flexbox</title>
+    <style>
+        html, body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: #eeeeee;
+            color: #3a3a3a;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #main-content-container {
+            display: flex;
+        }
+
+        #links-sidebar {
+            flex: 2;
+            background: pink
+        }
+
+        #main-content {
+            flex: 6;
+            padding: 10px 20% 10px 10px;
+        }
+
+        .main-content__img--full-width {
+            width: 100%;
+        }
+
+        #footer {
+            padding: 0 20px 20px 20px;
+            margin-top: auto;
+            display: flex;
+            background: #f3f3f3;
+        }
+
+        .footer__section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <h1> La musica como metodo de relagacion </h1>
+    <p> Que tipo de estres </p>
+</header>
+
+<nav id="navigation-bar">
+    Menu
+</nav>
+
+<div id="main-content-container">
+    <aside id="links-sidebar">
+        Links relacionados
+    </aside>
+    <section id="main-content">
+        <img src="data:image/jpeg;base64,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">
+
+        <h2>Biografía</h2>
+        <p>Edsger W. Dijkstra nació en Róterdam. Su padre, que fue presidente de la Sociedad Neerlandesa de Química,
+            había aprendido química durante la secundaria y más tarde de su superintendente. Su madre era matemática,
+            pero nunca tuvo un trabajo formal.</p>
+        <p>Dijkstra siempre había considerado emprender una carrera en Derecho y representar a los Países Bajos en las
+            Naciones Unidas. Sin embargo, tras graduarse en la escuela en 1948, bajo la dirección de sus padres estudió
+            matemáticas y física, y finalmente pasó a estudiar Física teórica en la Universidad de Leiden. Más tarde
+            trabajó como investigador para Burroughs Corporation a principios de los años 1970. En la Universidad de
+            Texas en Austin, Estados Unidos, ocupó el Schlumberger Centennial Chair in Computer Sciences. En 1965 dio
+            lugar al primer artículo científico en el campo de la computación concurrente y la programación
+            concurrente. Entre sus contribuciones a las ciencias de la computación está la solución del problema del
+            camino más corto, también conocido como el algoritmo de Dijkstra, la notación polaca inversa y el
+            relacionado algoritmo shunting yard, THE multiprogramming system, el algoritmo del banquero y la
+            construcción del semáforo para coordinar múltiples procesadores y programas.</p>
+
+        <h2>Personalidad y modo de trabajo</h2>
+        <p>Dijkstra es conocido como un "personaje" en el mundo de las ciencias de la computación. En el prólogo de su
+            libro A Discipline of Programming, escrito en 1976, declaró la siguiente frase: «Debido a la ausencia de una
+            bibliografía, no ofrezco ni explicación ni apología». De hecho, gran parte de sus artículos y libros no
+            tienen ninguna referencia. Esta ausencia de referencias fue criticada por muchos investigadores. Sin
+            embargo, Dijkstra eligió esta forma de trabajar para remarcar su autosuficiencia. </p>
+    </section>
+</div>
+
+<footer id="footer">
+    <div class="footer__social footer__section">
+        <h2>Mis redes</h2>
+
+
+    </div>
+    <div class="footer__contact-form footer__section">
+        <h2>Contacto</h2>
+    </div>
+    <div class="footer__more-sites footer__section">
+        <h2>Otros de mis sitios</h2>
+    </div>
+</footer>
+</body>
+</html>
